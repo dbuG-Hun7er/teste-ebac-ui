@@ -3,7 +3,7 @@
 describe('Funcionalidade: Login', () => {
 //Hooks usando beforeeach para facilitar a rotaçao e aftereach para fazer screnshote etcs
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/my-account/')
+        cy.visit('/minha-conta/')
      });
 
      afterEach(() => {
