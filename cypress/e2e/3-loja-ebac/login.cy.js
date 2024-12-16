@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+//massa de dados
+const perfil = require('../../fixtures/perfil.json')
 //teste de login loja EBAC
 describe('Funcionalidade: Login', () => {
 //Hooks usando beforeeach para facilitar a rotaçao e aftereach para fazer screnshote etcs
@@ -38,5 +40,21 @@ describe('Funcionalidade: Login', () => {
         cy.get('.woocommerce-error').should('exist')   
      
         
+    });
+
+    it('Deve gazer login com sucesso - Usando massa de dados', () => {
+        cy.get('#username').type(perfil.usuario)
+        cy.get('#password').type(perfil.senha)
+        cy.get('.woocommerce-form > .button').click()
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, lucas.teste (não é lucas.teste? Sair)') 
+    });
+
+    it.only('Deve gazer login com sucesso - Usando Fixture', () => {
+       cy.fixture('perfil').then( dados => {
+            cy.get('#username').type(dados.usuario)
+            cy.get('#password').type(dados.senha , { log: false })
+            cy.get('.woocommerce-form > .button').click()
+            cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, lucas.teste (não é lucas.teste? Sair)') 
+       })
     });
 })

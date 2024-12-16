@@ -8,4 +8,4 @@ describe('Funcionalidade: Produtos', () => {
         cy.get('.product-block').eq(1).click()
         cy.get('.button-variable-item-Green').should('contain','Green')
     });
-});
+})
