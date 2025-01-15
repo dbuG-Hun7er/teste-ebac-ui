@@ -10,7 +10,7 @@ describe("Funcionalidade: Login", () => {
 
   //afterEach(() => {cy.screenshot()});
   //teste de login, cenario sucesso
-  it("Deve fazer login com sucesso", () => {
+  it.only("Deve fazer login com sucesso", () => {
     cy.get("#username").type("lucas.teste@teste.com");
     cy.get("#password").type("teste@123");
     cy.get(".woocommerce-form > .button").click();
@@ -63,5 +63,13 @@ describe("Funcionalidade: Login", () => {
         "Olá, lucas.teste (não é lucas.teste? Sair)"
       );
     });
+  });
+
+  it.only("deve fazer login com sucesso - usando comandos customizado", () => {
+    cy.login("lucas.teste@teste.com", "teste@123");
+    cy.get(".woocommerce-MyAccount-content > :nth-child(2)").should(
+      "contain",
+      "Olá, lucas.teste (não é lucas.teste? Sair)"
+    );
   });
 });
