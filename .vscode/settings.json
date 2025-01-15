@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "errorLens.enabled": true,
+  "errorLens.fontSize": "14px",
+  "errorLens.fontFamily": "Courier New"
+}
