@@ -1,0 +1,22 @@
+[
+  {
+    "nomeProduto": "Ariel Roll Sleeve Sweatshirt",
+    "tamanho": "M",
+    "cor": "Green",
+    "quantidade": 5
+  },
+
+  {
+    "nomeProduto": "Atlas Fitness Tank",
+    "tamanho": "M",
+    "cor": "Blue",
+    "quantidade": 1
+  },
+
+  {
+    "nomeProduto": "Argus All-Weather Tank",
+    "tamanho": "XS",
+    "cor": "Gray",
+    "quantidade": 2
+  }
+]
