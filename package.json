@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "start": "npx serverest",
     "cy:run": "npx cypress run"
   },
   "keywords": [],
